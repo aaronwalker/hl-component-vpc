@@ -33,9 +33,9 @@ CloudFormation do
       Ref('EnvironmentName'), Ref('DnsDomain')
   ])
 
-  Route53_HostedZone('HostedZone') do
-    Name dns_domain
-  end
+  # Route53_HostedZone('HostedZone') do
+  #   Name dns_domain
+  # end
 
   EC2_DHCPOptions('DHCPOptionSet') do
     DomainName dns_domain
